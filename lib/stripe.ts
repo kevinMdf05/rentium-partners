@@ -4,7 +4,7 @@ import Stripe from "stripe";
  * Client Stripe côté serveur — singleton
  * Utilisé uniquement dans les API routes et Server Actions
  */
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "sk_test_placeholder", {
   apiVersion: "2026-02-25.clover",
   typescript: true,
 });

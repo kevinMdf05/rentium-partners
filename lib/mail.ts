@@ -4,7 +4,7 @@ import { Resend } from "resend";
  * Client Resend pour l'envoi d'emails transactionnels
  * Limite gratuite : 3 000 emails/mois, 100/jour
  */
-export const resend = new Resend(process.env.RESEND_API_KEY);
+export const resend = new Resend(process.env.RESEND_API_KEY || "re_placeholder");
 
 /** Adresse expéditeur par défaut */
 const FROM_EMAIL = "Rentium Partners <noreply@rentiumpartners.fr>";
